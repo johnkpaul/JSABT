@@ -104,7 +104,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
 )
 
-ROOT_URLCONF = 'jsabt.urls'
+ROOT_URLCONF = 'JSABT.urls'
 
     
 
