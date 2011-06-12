@@ -1,4 +1,5 @@
 from django.db import models
+import urllib
 
 class Photocopy(models.Model):
     title = models.CharField(max_length=4096)
@@ -14,3 +15,11 @@ class Photocopy(models.Model):
     def __unicode__(self):
         return self.title
 
+    def save(self, *args, **kwargs):
+        self.fetch_content();
+        super(Photocopy, self).save(*args, **kwargs) # Call the "real" save() method.
+
+    def fetch_content(self):
+        print self.url
+        self.article_content = urllib.urlopen(self.url).read()
+        print self.article_content
