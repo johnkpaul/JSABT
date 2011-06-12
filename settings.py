@@ -73,9 +73,7 @@ ADMIN_MEDIA_PREFIX = '/static/admin/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
-    # Put strings here, like "/home/html/static" or "C:/www/django/static".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
+    path('photocopy/static'),
 )
 
 # List of finder classes that know how to find static files in
@@ -110,6 +108,14 @@ ROOT_URLCONF = 'JSABT.urls'
 
 TEMPLATE_DIRS = (
     path('templates')
+)
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.core.context_processors.auth',
+    'django.core.context_processors.debug',
+    'django.core.context_processors.i18n',
+    'django.core.context_processors.media',
+    'django.core.context_processors.static',
 )
 
 INSTALLED_APPS = (
