@@ -78,15 +78,22 @@ h1, h2, h3, h4, h5, h6 { font-weight: bold; }
 a, a:active, a:visited { color: #607890; }
 a:hover { color: #036; }
 
-/*
-    // ========================================== \\
-   ||                                              ||
-   ||               Your styles !                  ||
-   ||                                              ||
-    \\ ========================================== //
-*/
+@font-face {
+  font-family: 'Droid Sans';
+  font-style: normal;
+  src: local('Droid Sans'), url('http://playground.html5rocks.com/samples/html5_misc/Droid_Sans.ttf') format('truetype');
+}
 
-
+body{width:960px;margin:auto;font-size:14px;font-family:'Droid Sans', Arial;background:#E0EBFF}
+a{text-decoration:none;font-family:'Essays 1743',Palatino,'Palatino Linotype','Book Antiqua',Georgia,'Times New Roman',serif;color:black;}
+header{padding-bottom:4px;overflow:auto;}
+header > a{line-height:60px;}
+#logo{font-size:40px;display:block;float:left;}
+#logo:before{content:'\2234';}
+a:hover{color:#B22222;}
+.add{float:right;}
+#container{padding:20px;background:white;border:solid #B22222;border-width:1px 0;}
+footer{margin-top:10px;}
 
 
 
