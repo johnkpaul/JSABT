@@ -1,7 +1,10 @@
-# Django settings for jsabt project.
+import os
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
+
+ROOT = os.path.dirname(os.path.abspath(__file__))
+path = lambda *a: os.path.join(ROOT, *a)
 
 ADMINS = (
      ('John P', 'john@johnkpaul.com'),
@@ -104,11 +107,9 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'jsabt.urls'
 
     
-import os
-PROJECT_PATH = os.path.abspath(os.path.dirname(__file__))
 
 TEMPLATE_DIRS = (
-    os.path.join(PROJECT_PATH, 'templates')
+    path('templates')
 )
 
 INSTALLED_APPS = (
@@ -118,6 +119,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'photocopy',
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
