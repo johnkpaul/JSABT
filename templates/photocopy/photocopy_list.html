@@ -1,0 +1,9 @@
+list view
+
+<h2>All Photocopies</h2>
+  <ul>
+      {% for photocopy in object_list %}
+          <li>{{ photocopy.title }}</li>
+      {% endfor %}
+ </ul>
+

@@ -8,3 +8,9 @@ class Photocopy(models.Model):
     save_date = models.DateTimeField(auto_now_add=True)
     update_date = models.DateTimeField(auto_now=True)
 
+    class Meta:
+       ordering = ["-update_date"]
+
+    def __unicode__(self):
+        return self.title
+
