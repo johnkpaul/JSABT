@@ -7,4 +7,5 @@ urlpatterns = patterns('',
     url(r'^all/', ListView.as_view(model=Photocopy,)),
     url(r'^bookmarks/add', 'photocopy.views.bookmarks', name='add_bookmarks'),
     url(r'^api/search/(?P<search_query>.*)', 'photocopy.views.search', name='search'),
+    url(r'^api/load', 'photocopy.views.load', name='load'),
 )
