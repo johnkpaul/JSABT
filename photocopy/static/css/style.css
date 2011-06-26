@@ -96,6 +96,11 @@ a:hover{color:#B22222;}
 footer{margin-top:10px;}
 
 
+#bookmarks{padding:10px;margin:10px 0px;}
+#bookmarks li{}
+#bookmarks li a{font-size:20px;}
+
+
 
 
 
