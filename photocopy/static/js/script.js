@@ -3,9 +3,13 @@ $(function(){
                 var value = $(this).val();
                 $.ajax({
                         type:"GET",
-                        url:"/api/search?value="+value,
+                        url:"/api/search/"+value,
                         success:function(data){
-                            console.log(arguments[0]);
+                            $("#bookmarks").html("");
+                            for(var i = 0, len = data.length;i<len;i++){
+                                var photocopy = data[i].fields;
+                                $("#bookmarks").append("<li><a href='"+photocopy.url+"'>"+photocopy.title+"</a>");
+                            }
                         }
                     });
             });
