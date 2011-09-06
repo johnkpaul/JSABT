@@ -6,7 +6,8 @@ from django.http import HttpResponse
 import feedparser
 
 def home(request):
-    return render_to_response('home.html',context_instance=RequestContext(request));
+    results = Photocopy.objects.all()[:5]
+    return render_to_response('home.html', {'results': results},context_instance=RequestContext(request))
 
 def bookmarks(request):
     return render_to_response('photocopy/bookmarks.html',context_instance=RequestContext(request));

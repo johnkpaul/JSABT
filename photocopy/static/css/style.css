@@ -100,17 +100,7 @@ footer{margin-top:10px;}
 #bookmarks li{}
 #bookmarks li a{font-size:20px;}
 
-
-
-
-
-
-
-
-
-
-
-
+.date { font-size:0.95em; font-style:italic; font-family:sans-serif; }
 
 .ir { display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr; }
 .hidden { display: none; visibility: hidden; }
